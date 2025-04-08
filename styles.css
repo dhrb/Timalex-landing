@@ -337,10 +337,14 @@ body {
   margin: 0 0 35px 0;
 }
 .aboutBody {
-  background-color: #c08457;
+  background-color: #f4efe9;
+  color: #3a2f2f;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  color: #1a1a1a;
   max-width: 550px;
   padding: 25px 45px;
-  border-radius: 10px;
 }
 .aboutBody ul {
   list-style-type: none;
@@ -428,22 +432,20 @@ body {
 
 .footerWrapper {
   background: #fff;
-  padding: 40px 20px;
+  padding: 40px 100px;
   color: black;
   border-top: 0.5px solid gray;
+  text-align: center;
 }
 
 .footerInner {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
+  align-items: center;
 }
 
 .footerLogo {
   max-width: 150px;
-  margin-bottom: 10px;
 }
 
 .footerCopyright {
@@ -453,7 +455,6 @@ body {
 
 .footerNav {
   display: flex;
-  flex: 1 1 200px;
   gap: 40px;
 }
 
@@ -469,7 +470,7 @@ body {
 .footerNavLink {
   color: black;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 1.1em;
 }
 
 .footerNavLink:hover {
@@ -566,5 +567,8 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+  }
+  .footerLogo {
+    margin-bottom: 10px;
   }
 }
