@@ -30,8 +30,12 @@ body {
   display: flex;
   justify-content: center;
 }
-.logo img {
-  height: 50px;
+.headerBurgerWrapper {
+  display: none;
+}
+
+.logoImage {
+  width: 70%;
 }
 
 .navList {
@@ -132,8 +136,8 @@ body {
   max-width: 600px;
 }
 
-.welcomeContent h1 {
-  font-size: 4.5rem;
+.welcomeContentTitle {
+  font-size: 3.5em;
   margin-bottom: 20px;
 }
 
@@ -353,9 +357,8 @@ body {
 .contactUs {
   background-color: #fff;
   color: #522b1d;
-  padding: 25px 10px;
   width: 100%;
-  padding: 80px 80px;
+  padding: 50px 80px;
 }
 
 .contactUsWrapper {
@@ -427,6 +430,7 @@ body {
   background: #fff;
   padding: 40px 20px;
   color: black;
+  border-top: 0.5px solid gray;
 }
 
 .footerInner {
@@ -508,7 +512,16 @@ body {
   width: 50px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
+  .headerNav {
+    display: none;
+  }
+  .headerBurgerWrapper {
+    display: block;
+  }
+  .headerBurgerImg {
+    width: 35px;
+  }
   .contactUs {
     padding: 75px 10px;
   }
