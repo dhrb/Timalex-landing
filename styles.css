@@ -1,0 +1,557 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background: #ffffff;
+  padding: 10px 0;
+  border-top: 5px solid #e6994c;
+}
+
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 5px;
+}
+.headerNav {
+  display: flex;
+  justify-content: center;
+}
+.logo img {
+  height: 50px;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navItemLink {
+  text-decoration: none;
+  color: #5a3b2c;
+  font-weight: 500;
+}
+.navItemLinkActive {
+  border-bottom: 0.4px solid #5a3b2c;
+}
+.dropdownList {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.dropdownBtn {
+  color: #5a3b2c;
+  display: block;
+}
+
+.navItemDrop:hover .dropdownList {
+  display: block;
+  background-color: red;
+}
+
+.headerContact {
+  display: flex;
+  align-items: center;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: right;
+  margin: 0 15px;
+}
+.socialIcons a {
+  padding: 0 8px;
+}
+.socialIcons img {
+  width: 26px;
+}
+.langSelect {
+  margin: 0 15px 0 0;
+}
+
+.langSelect img {
+  width: 25px;
+  cursor: pointer;
+}
+
+.callbackBtn {
+  background: transparent;
+  border: 1.5px solid #e6994c;
+  padding: 5px 15px;
+  color: #5a3b2c;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.callbackBtn:hover {
+  background: #e6994c;
+  color: white;
+}
+
+.welcome {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("./assets/welcomeBgImage.jpg") no-repeat center center/cover;
+}
+
+.welcomeWrapper {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.welcomeContent {
+  color: white;
+  max-width: 600px;
+}
+
+.welcomeContent h1 {
+  font-size: 4.5rem;
+  margin-bottom: 20px;
+}
+
+.welcomeContent p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.welcomeBtn {
+  background: #d4a373;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 5px;
+}
+
+.welcomeBtn:hover {
+  background: #c08457;
+}
+
+.offerWrapper {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.offerTitle {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.offerDescription {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 1rem;
+  color: #7d7d7d;
+}
+
+.cardsWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.cardBg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Styles for planks.html */
+.productsContentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.productsHeaderTitle {
+  position: relative;
+  height: 250px;
+}
+.productsHeaderTitleImg {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+}
+.productsHeaderTitleText {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  font-size: 30px;
+  background-color: rgba(255, 225, 225, 0.8);
+  padding: 15px;
+  border-radius: 5px;
+}
+.productsHeaderInfo {
+  width: 100%;
+  padding: 25px 55px;
+  background-color: #eee9e3;
+  border-bottom: 0.2px solid #747474;
+}
+.productsHeaderIntro {
+  font-weight: 500;
+}
+.productsTitle {
+}
+.productsBody {
+  margin: 25px 0;
+  padding: 15px 35px;
+}
+.bodyTitle {
+  text-align: left;
+  margin: 0 0 0 25px;
+}
+.productsCards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.productsCard {
+  display: flex;
+  width: 100%;
+  max-width: 350px;
+  flex-direction: column;
+  margin: 25px;
+}
+.productsCardImg {
+  border-radius: 15px 15px 0 0;
+}
+.productsCardName {
+  font-size: 24px;
+  color: #9a734a;
+  font-weight: 500;
+  margin: 0 0 10px 0;
+}
+
+.productsCardParams {
+  border-radius: 0 0 15px 15px;
+  background-color: #eee9e3;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+}
+.productsParams2 {
+  margin: 20px 0;
+}
+
+/* End of styles for planks.html */
+.aboutWrapper {
+  background-color: #c08457;
+  background: url("./assets/aboutBg.svg") no-repeat right;
+  margin: 50px 0;
+  padding: 0 0 0 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutTitle {
+  color: #5c4033;
+  padding: 0 40px;
+  margin: 0 0 35px 0;
+}
+.aboutBody {
+  background-color: #c08457;
+  max-width: 550px;
+  padding: 25px 45px;
+  border-radius: 10px;
+}
+.aboutBody ul {
+  list-style-type: none;
+}
+.aboutFeatures {
+  margin: 20px 0;
+}
+.aboutCompanyFeatures {
+  margin: 20px 0;
+}
+.featuresItem {
+}
+
+.contactUs {
+  background-color: #fff;
+  color: #522b1d;
+  padding: 25px 10px;
+  width: 100%;
+  padding: 80px 80px;
+}
+
+.contactUsWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+}
+.contactUsInfo {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 35px 0 0 0;
+  max-width: 450px;
+}
+.infoPhone {
+  text-decoration: none;
+  color: inherit;
+}
+.infoAdress {
+  margin: 0 0 5px;
+}
+.contactUsForm {
+  width: 48%;
+  max-width: 450px;
+}
+.iframeMap {
+  width: 100%;
+  border: 0;
+}
+.contactUsForm form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+.formInput {
+  width: 100%;
+  min-height: 60px;
+  padding: 8px 0 8px 8px;
+  margin: 5px 0;
+  border: 1px solid #3f2218;
+}
+.formSelector {
+  margin: 5px 0;
+  min-height: 60px;
+  padding: 8px 0 8px 8px;
+  border: 1px solid #522b1d;
+}
+.formTextarea {
+  padding: 8px 0 8px 8px;
+  width: 100%;
+  border: 1px solid #522b1d;
+  margin: 5px 0;
+}
+.formBtn {
+  margin: 15px 0 0 0;
+  font-size: 20px;
+  background-color: #035325;
+  width: 40%;
+  color: #fff;
+  border: none;
+  height: 60px;
+}
+
+/* footer */
+
+.footerWrapper {
+  background: #fff;
+  padding: 40px 20px;
+  color: black;
+}
+
+.footerInner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footerLogo {
+  max-width: 150px;
+  margin-bottom: 10px;
+}
+
+.footerCopyright {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.footerNav {
+  display: flex;
+  flex: 1 1 200px;
+  gap: 40px;
+}
+
+.footerNavList {
+  list-style: none;
+  padding: 0;
+}
+
+.footerNavItem {
+  margin-bottom: 10px;
+}
+
+.footerNavLink {
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footerNavLink:hover {
+  text-decoration: underline;
+}
+
+.footerContacts {
+  flex: 1 1 200px;
+}
+
+.footerContactList {
+  list-style: none;
+  padding: 0;
+}
+
+.footerContactItem {
+  font-size: 14px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.footerContactIcon {
+  margin-right: 8px;
+}
+
+.footerSocial {
+  flex: 1 1 200px;
+}
+
+.footerSocialTitle {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footerSocialIcons a {
+  margin-right: 10px;
+}
+.footerSocialIcons img {
+  width: 50px;
+}
+
+@media (max-width: 550px) {
+  .contactUs {
+    padding: 75px 10px;
+  }
+  .contactUs h2 {
+    margin: 0 0 0 33px;
+  }
+  .contactUsWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contactUsInfo {
+    width: 100%;
+  }
+  .infoPhone {
+    margin: 20px 0 20px;
+  }
+  .contactUsForm {
+    margin: 25px 0 0 0;
+    width: 100%;
+  }
+  .footerWrapper {
+    padding: 20px 10px 5px;
+  }
+  .footerSocial {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footerNav {
+    margin: 40px 0 0 0;
+    padding: 0;
+    flex: 0 0 0;
+    gap: 0;
+  }
+  .footerInner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footerLogoSection {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
