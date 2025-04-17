@@ -13,6 +13,8 @@ a {
 
 body {
   font-family: Arial, sans-serif;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .header {
@@ -272,51 +274,47 @@ body {
   font-weight: 400;
 }
 .productsLists {
-  padding: 35px 25px;
+  padding: 25px 35px;
   align-items: center;
 }
 .productsLists li {
-  margin: 0 0 0 15px;
+  margin: 0 0 0 25px;
   font-size: 18px;
+}
+.advantageItem {
+  line-height: 1.8rem;
 }
 .productsListTitle {
   font-size: 20px;
-  margin: 10px 0;
+  line-height: 1.8rem;
+  margin: 5px 0 0 0;
 }
 
 /* products body block */
 
-.productsBody {
-  padding: 0px 35px;
-  margin: 0 0 35px 0;
-  display: flex;
-  width: 100%;
-}
-.bodyTitle {
-  text-align: left;
-  margin: 0 0 0 25px;
-}
 .productsCards {
   display: flex;
-  gap: 5%;
+  flex-wrap: wrap;
   overflow: scroll;
 }
 .productsCard {
-  background-color: #eae6da;
+  background-color: #eae6daaa;
   border-radius: 7px;
-  max-width: 320px;
+  margin: 10px 10px;
+  max-width: 350px;
+  height: 100%;
 }
 
 .productsCardImg {
   border-radius: 15px 15px 0 0;
   width: 100%;
   padding: 25px 15px;
-  max-height: 200px;
+  height: 90%;
 }
 
 .productsCardCaption {
   font-size: 18px;
-  padding: 15px 15px;
+  padding: 5px 0 7px 10px;
   line-height: 1.7rem;
   border-top: 1px solid #9090906f;
 }
@@ -510,10 +508,46 @@ body {
   width: 50px;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 767px) {
   .headerNav {
-    display: none;
+    position: absolute;
+    top: 8%;
+    z-index: 1;
+    color: #1a1a1a;
+    background-color: #fff;
+    left: 0;
+    color: black;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    opacity: 0;
   }
+
+  .headerNavActive {
+    transition: all 1s ease;
+    transform: translateY(0);
+
+    position: absolute;
+    top: 8%;
+    z-index: 1;
+    color: #1a1a1a;
+    background-color: #fff;
+    left: 0;
+    color: black;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .navList {
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+    color: #1a1a1a;
+  }
+
   .headerBurgerWrapper {
     display: block;
   }

@@ -1,18 +1,26 @@
 const productTitle = document.querySelector("#productTitle");
-// const navlist = document.querySelector(".navList");
-// const planksId = document.querySelector("#planksId");
-// const coalId = document.querySelector("#coalId");
-// const woodId = document.querySelector("#woodId");
 const navlinks = document.querySelectorAll(".navItemLink");
 const activeCategory = document.getElementsByClassName("navItemLinkActive");
 const productsCards = document.querySelector("#productsCards");
 const form = document.querySelector(".formWrapp");
+const headerBurgerIcon = document.querySelector(".headerBurgerImg");
+const headerNav = document.querySelector(".headerNav");
 (function () {
   console.log("emailjs initialized");
   emailjs.init({
     publicKey: "uAfhbf8EIIHvaYAbn",
   });
 })();
+
+headerBurgerIcon.addEventListener("click", () => {
+  if (headerNav.classList.contains("headerNav")) {
+    headerNav.classList.remove("headerNav");
+    headerNav.classList.add("headerNavActive");
+  } else {
+    headerNav.classList.remove("headerNavActive");
+    headerNav.classList.add("headerNav");
+  }
+});
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
