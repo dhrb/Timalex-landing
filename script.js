@@ -1,12 +1,8 @@
-const productTitle = document.querySelector("#productTitle");
-const navlinks = document.querySelectorAll(".navItemLink");
-const activeCategory = document.getElementsByClassName("navItemLinkActive");
-const productsCards = document.querySelector("#productsCards");
 const form = document.querySelector(".formWrapp");
 const headerBurgerIcon = document.querySelector(".headerBurgerImg");
 const headerNav = document.querySelector(".headerNav");
+
 (function () {
-  console.log("emailjs initialized");
   emailjs.init({
     publicKey: "uAfhbf8EIIHvaYAbn",
   });
@@ -40,19 +36,6 @@ form.addEventListener("submit", (event) => {
   );
 });
 
-navlinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    navlinks.forEach((navlink) => {
-      if (navlink.id !== link.id) {
-        navlink.classList.remove("navItemLinkActive");
-      } else {
-        link.classList.add("navItemLinkActive");
-        console.log(activeCategory);
-      }
-    });
-  });
-});
-
 document.addEventListener("DOMContentLoaded", function () {
   const banner = document.getElementById("cookieBanner");
   const acceptBtn = document.getElementById("acceptCookies");
@@ -67,3 +50,14 @@ document.addEventListener("DOMContentLoaded", function () {
     banner.style.display = "none";
   });
 });
+
+const glide = new Glide(".glide", {
+  type: "slider", // Тип слайдера
+  startAt: 2, // Начинаем с первого слайда
+  perView: 4, // Показываем один слайд за раз
+  focusAt: "center", // Центрируем активный слайд
+  gap: 10, // Зазор между слайдами
+  rewind: true,
+});
+
+glide.mount();
