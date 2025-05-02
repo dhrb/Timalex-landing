@@ -570,6 +570,43 @@ body {
   background-color: #00b34d;
 }
 
+/* cookie banner */
+.cookieBanner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #333;
+  color: #fff;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+  font-size: 14px;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cookieText a {
+  color: #f15a29;
+  text-decoration: underline;
+}
+
+.cookieButton {
+  background-color: #f15a29;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-left: 20px;
+}
+
+.cookieButton:hover {
+  background-color: #d84e21;
+}
+
 @media (max-width: 767px) {
   .headerNav {
     position: absolute;

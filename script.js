@@ -52,3 +52,18 @@ navlinks.forEach((link) => {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const banner = document.getElementById("cookieBanner");
+  const acceptBtn = document.getElementById("acceptCookies");
+
+  // Если уже согласился — не показываем
+  if (localStorage.getItem("cookiesAccepted") === "true") {
+    banner.style.display = "none";
+  }
+
+  acceptBtn.addEventListener("click", function () {
+    localStorage.setItem("cookiesAccepted", "true");
+    banner.style.display = "none";
+  });
+});

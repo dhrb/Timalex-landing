@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta author="l" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <title>Timalex firewood</title>
     <link rel="stylesheet" href="styles.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
   </head>
   <body>
     <header class="header">
@@ -35,6 +41,11 @@
                 >Firewood</a
               >
             </li>
+            <li class="navItem">
+              <a class="navItemLink" href="./contactus.html" id="woodId"
+                >Contact Us</a
+              >
+            </li>
           </ul>
         </nav>
         <nav class="headerBurgerWrapper">
@@ -49,10 +60,13 @@
             <a href="tel:+421919146718">
               <img src="./assets/telIcon.png" alt="Phone" />
             </a>
-            <a href="#">
+            <a href="https://wa.me/380676927263" target="_blank">
               <img src="./assets/whatsappIcon.png" alt="WhatsApp" />
             </a>
-            <a href="#">
+            <a
+              href="https://www.linkedin.com/in/alex-simonov-790bb0121/"
+              target="_blank"
+            >
               <img src="./assets/linkedinIcon.png" alt="linkedin" />
             </a>
           </div>
@@ -66,11 +80,7 @@
     <div class="productsContentWrapper">
       <div class="productsHeader">
         <div class="productsTitleBlock">
-          <img
-            src="./assets/planksPageBg.jpg"
-            alt="bg"
-            class="productHeaderBg"
-          />
+          <img src="./assets/firewoodBg.jpg" alt="bg" class="productHeaderBg" />
           <div class="productsTitleTextBlock">
             <h3 class="productsTitle">Firewood</h3>
             <h3 class="productsSubtitle">
@@ -156,7 +166,12 @@
               <a href="./firewood.html" class="footerNavLink">Firewood</a>
             </li>
             <li class="footerNavItem">
-              <a href="#" class="footerNavLink">Privacy Policy</a>
+              <a href="./contactus.html" class="footerNavLink">Contact Us</a>
+            </li>
+            <li class="footerNavItem">
+              <a href="./privacyPolicy.html" class="footerNavLink"
+                >Privacy Policy</a
+              >
             </li>
           </ul>
         </nav>
