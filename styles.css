@@ -259,7 +259,7 @@ body {
 .productsTitleTextBlock {
   position: absolute;
   top: 40%;
-  left: 30%;
+  left: 20%;
   background-color: #f4efe9d6;
   padding: 10px 15px;
   border-radius: 5px;
@@ -295,28 +295,25 @@ body {
 .productsCards {
   display: flex;
   flex-wrap: wrap;
-  overflow: scroll;
 }
 .productsCard {
   background-color: #eae6daaa;
   border-radius: 7px;
   margin: 10px 10px;
   max-width: 350px;
-  height: 100%;
 }
 
 .productsCardImg {
   border-radius: 15px 15px 0 0;
   width: 100%;
   padding: 25px 15px;
-  height: 90%;
+  height: 300px;
 }
 
 .productsCardCaption {
   font-size: 18px;
-  padding: 5px 0 7px 10px;
-  line-height: 1.7rem;
   border-top: 1px solid #9090906f;
+  padding: 10px;
 }
 
 /* End of styles for planks.html */
@@ -385,7 +382,7 @@ body {
   max-width: 450px;
 }
 .iframeMap {
-  width: 100%;
+  width: 90%;
   border: 0;
 }
 .contactUsForm form {
@@ -508,10 +505,75 @@ body {
   width: 50px;
 }
 
+.contactContainer {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: whitesmoke;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+.contactInfo {
+  width: 80%;
+}
+.contactTitle {
+  font-size: 28px;
+  margin: 10px 0 25px;
+}
+.contactDescription {
+  font-size: 18px;
+  font-weight: 300;
+  width: 80%;
+}
+.contactDetails {
+  display: flex;
+  min-height: 120px;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 15px 0 0 15px;
+}
+.contactForm {
+  color: #d94f20;
+}
+.formInput {
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  color: rgb(97, 41, 0);
+  box-shadow: 1px 1px 1px darkgrey;
+}
+.formTextarea {
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  min-height: 100px;
+  box-shadow: 1px 1px 1px darkgrey;
+}
+.formButton {
+  padding: 12px;
+  background-color: #035326ca;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 1px 1px 1px darkgrey;
+}
+
+.formButton:hover {
+  background-color: #00b34d;
+}
+
 @media (max-width: 767px) {
   .headerNav {
     position: absolute;
-    top: 8%;
+    top: 7%;
     z-index: 1;
     color: #1a1a1a;
     background-color: #fff;
@@ -571,7 +633,10 @@ body {
     justify-content: center;
   }
   .productsCards {
-    display: block;
+    justify-content: center;
+  }
+  .productsTitleTextBlock {
+    left: 5%;
   }
   .productsCard:nth-child(2) {
     margin: 15px 0;
@@ -621,6 +686,16 @@ body {
   }
   .footerCopyright {
     padding: 0;
+  }
+  .contactContainer {
+    flex-direction: column;
+  }
+  .contactForm {
+    margin: 35px 0 0 0;
+  }
+  .formButton {
+    width: 100%;
+    margin: 5px 0 0 0;
   }
 }
 
