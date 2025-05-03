@@ -1,12 +1,17 @@
 const form = document.querySelector(".formWrapp");
 const headerBurgerIcon = document.querySelector(".headerBurgerImg");
 const headerNav = document.querySelector(".headerNav");
+const contactFormSent = document.querySelector(".contactFormSent");
 
 (function () {
   emailjs.init({
     publicKey: "uAfhbf8EIIHvaYAbn",
   });
 })();
+
+// if (localStorage.getItem("formSubmitted" == true)) {
+//   contactFormSent.
+// }
 
 headerBurgerIcon.addEventListener("click", () => {
   if (headerNav.classList.contains("headerNav")) {
@@ -50,14 +55,3 @@ document.addEventListener("DOMContentLoaded", function () {
     banner.style.display = "none";
   });
 });
-
-const glide = new Glide(".glide", {
-  type: "slider", // Тип слайдера
-  startAt: 2, // Начинаем с первого слайда
-  perView: 4, // Показываем один слайд за раз
-  focusAt: "center", // Центрируем активный слайд
-  gap: 10, // Зазор между слайдами
-  rewind: true,
-});
-
-glide.mount();

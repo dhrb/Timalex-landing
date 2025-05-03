@@ -307,6 +307,7 @@ body {
   font-size: 18px;
   border-top: 1px solid #9090906f;
   padding: 10px;
+  text-align: center;
 }
 
 /* End of styles for planks.html */
@@ -552,6 +553,10 @@ body {
 .contactForm {
   color: #d94f20;
 }
+.contactFormSent {
+  display: none;
+}
+
 .formInput {
   padding: 12px;
   font-size: 14px;
