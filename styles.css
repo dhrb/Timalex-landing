@@ -288,19 +288,39 @@ body {
 .productsCards {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 .productsCard {
   background-color: #eae6daaa;
   border-radius: 7px;
   margin: 10px 10px;
   max-width: 350px;
+  height: 350px;
+}
+.productsCardImages {
+  position: relative;
+  top: 0;
 }
 
-.productsCardImg {
+.productsCard img {
   border-radius: 15px 15px 0 0;
-  width: 100%;
-  padding: 25px 15px;
-  height: 300px;
+  padding: 15px 15px;
+  max-width: 350px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+.productsHoverCard {
+  opacity: 0;
+  pointer-events: none;
+}
+.productsCard:hover .productsHoverCard {
+  opacity: 1;
+}
+.productsCardImg:hover {
+  opacity: 0;
 }
 
 .productsCardCaption {
@@ -308,6 +328,8 @@ body {
   border-top: 1px solid #9090906f;
   padding: 10px;
   text-align: center;
+  position: relative;
+  top: 80%;
 }
 
 /* End of styles for planks.html */
