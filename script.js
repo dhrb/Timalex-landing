@@ -8,8 +8,12 @@ const form =
   document.querySelector(".contactForm");
 
 (function () {
-  emailjs.init({ publicKey: "4ZZFnnEN3wp7yjDFa" });
-  console.log("EmailJS initialized");
+  try {
+    emailjs.init({ publicKey: "4ZZFnnEN3wp7yjDFa" });
+    console.log("EmailJS initialized");
+  } catch (error) {
+    console.log(error.message);
+  }
 })();
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -17,13 +21,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const acceptBtn = document.getElementById("acceptCookies");
 
   if (localStorage.getItem("cookiesAccepted") === "true") {
-    banner.style.display = "none";
+    try {
+      banner.style.display = "none";
+    } catch (err) {
+      console.log(err.message);
+    }
   }
   if (localStorage.getItem("formSent") === "true") {
-    form.style.display = "none";
-    contactFormSent.style.display = "flex";
-    if (contactUsForm) {
-      contactUsForm.style.display = "none";
+    try {
+      form.style.display = "none";
+      contactFormSent.style.display = "flex";
+      if (contactUsForm) {
+        contactUsForm.style.display = "none";
+      }
+    } catch (err) {
+      console.log(err.message);
     }
   }
   acceptBtn?.addEventListener("click", () => {
@@ -50,8 +62,6 @@ if (form) {
       message: document.getElementById("inputText")?.value || "",
     };
 
-    console.log("Sending form:", formData);
-
     emailjs.send("service_nvj38rj", "template_zqelhv8", formData).then(
       (response) => {
         localStorage.setItem("formSent", "true");
@@ -59,7 +69,7 @@ if (form) {
       },
       (error) => {
         console.log(error);
-        prompt(
+        alert(
           "Something wrong, please try again or choice our different ways of contact with us"
         );
       }

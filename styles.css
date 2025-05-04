@@ -752,15 +752,27 @@ body {
     width: 35px;
   }
   .contactUs {
-    padding: 75px 10px;
-    display: flex;
+    border-top: 0.5px solid #3f2218;
+    margin: 45px 0 0;
+    padding: 10px 10px 15px;
+    display: block;
     justify-content: space-between;
     align-items: center;
+  }
+  .contactFormSent {
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+  }
+  .contactFormSentImg {
+    width: 150px;
+    margin: 45px 0 25px 0;
   }
   .contactUs h2 {
     margin: 0 0 0 33px;
   }
   .contactUsWrapper {
+    padding: 0;
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -825,6 +837,8 @@ body {
     text-align: left;
   }
   .footerWrapper {
+    padding: 0 0;
+    margin: 0 0 5px 0;
   }
   .footerSocial {
     width: 100%;
@@ -856,6 +870,12 @@ body {
   }
   .contactContainer {
     flex-direction: column;
+  }
+  .contactInfo {
+    width: 100%;
+  }
+  .contactDescription {
+    width: 100%;
   }
   .contactForm {
     margin: 35px 0 0 0;
