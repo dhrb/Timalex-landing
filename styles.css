@@ -288,25 +288,29 @@ body {
 .productsCards {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
 }
 .productsCard {
   background-color: #eae6daaa;
   border-radius: 7px;
-  margin: 10px 10px;
   max-width: 350px;
+  width: 100%;
+  margin: 10px 10px;
+  padding: 5px;
   height: 350px;
-}
-.productsCardImages {
   position: relative;
   top: 0;
+  left: 0;
+}
+.productsCardImages {
+  width: 100%;
+  height: 90%;
 }
 
 .productsCard img {
-  border-radius: 15px 15px 0 0;
+  border-radius: 7px;
   padding: 15px 15px;
-  max-width: 350px;
-
+  width: 100%;
+  height: 90%;
   position: absolute;
   top: 0;
   left: 0;
@@ -314,22 +318,21 @@ body {
 }
 .productsHoverCard {
   opacity: 0;
-  pointer-events: none;
 }
 .productsCard:hover .productsHoverCard {
   opacity: 1;
 }
 .productsCardImg:hover {
   opacity: 0;
+  cursor: pointer;
 }
 
 .productsCardCaption {
   font-size: 18px;
   border-top: 1px solid #9090906f;
-  padding: 10px;
+  padding: 7px 0 0 0;
   text-align: center;
-  position: relative;
-  top: 80%;
+  vertical-align: baseline;
 }
 
 /* End of styles for planks.html */
@@ -577,6 +580,18 @@ body {
 }
 .contactFormSent {
   display: none;
+  max-width: 350px;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+.contactFormSentImg {
+  margin: 0 0 25px 0;
+  width: 200px;
 }
 
 .formInput {
@@ -738,6 +753,9 @@ body {
   }
   .contactUs {
     padding: 75px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .contactUs h2 {
     margin: 0 0 0 33px;

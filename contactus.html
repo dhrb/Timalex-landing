@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <title>Timalex s.r.o.</title>
+
     <link rel="stylesheet" href="styles.css" />
     <script
       type="text/javascript"
@@ -71,9 +72,6 @@
               <img src="./assets/linkedinIcon.png" alt="linkedin" />
             </a>
           </div>
-          <!-- <div class="langSelect">
-              <img src="./assets/englishIcon.svg" alt="English" />
-            </div> -->
         </div>
       </div>
     </header>
@@ -93,7 +91,7 @@
           the necessary information.
         </p>
         <div class="contactDetails">
-          <a href="tel:+421918123153">📞 + 421 918-123-153</a>
+          <a href="tel:+421918123153">📞 +421 918-123-153</a>
           <a href="mailto:info@timalex.sk">📧 info@timalex.sk</a>
           <p>📍 Spitalska 53,<br />Bratislava, SK 81101</p>
         </div>
@@ -104,17 +102,40 @@
           loading="lazy"
         ></iframe>
       </div>
-
-      <form class="contactForm">
-        <div class="nameFields">
-          <input type="text" placeholder="First name" class="formInput" />
-          <input type="text" placeholder="Last name" class="formInput" />
-        </div>
-        <input type="email" placeholder="example@email.com" class="formInput" />
-        <input type="text" placeholder="xxx-xxx-xxxx" class="formInput" />
+      <div class="contactFormSent">
+        <img
+          src="./assets/sent.png"
+          alt="senticon"
+          class="contactFormSentImg"
+        />
+        <p class="contactFormSentText">
+          This form has already been submitted. Further submissions from this
+          device are not necessary. Thank you for your cooperation.
+        </p>
+      </div>
+      <form class="formWrapp">
+        <input
+          type="text"
+          placeholder="Name and surname"
+          class="formInput"
+          id="inputName"
+        />
+        <input
+          type="email"
+          placeholder="example@email.com"
+          class="formInput"
+          id="inputEmail"
+        />
+        <input
+          type="text"
+          placeholder="xxx-xxx-xxxx"
+          class="formInput"
+          id="inputPhone"
+        />
         <textarea
           placeholder="Type your message ..."
           class="formTextarea"
+          id="inputText"
         ></textarea>
         <button type="submit" class="formButton">Submit</button>
       </form>
@@ -171,5 +192,13 @@
       </div>
       <p class="footerCopyright">© 2025. All rights reserved</p>
     </footer>
+    <div id="cookieBanner" class="cookieBanner">
+      <p class="cookieText">
+        We use cookies to improve your experience. By using this site or
+        <a href="/privacyPolicy.html" target="_blank">Privacy Policy</a>.
+      </p>
+      <button id="acceptCookies" class="cookieButton">Accept</button>
+    </div>
+    <script src="./script.js"></script>
   </body>
 </html>
