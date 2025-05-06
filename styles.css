@@ -75,13 +75,18 @@ body {
 
 .socialIcons {
   display: flex;
-  justify-content: right;
+  transition: all 1s ease-in-out;
 }
 .socialIcons :nth-child(2) {
   margin: 0 8px;
 }
 .socialIcons img {
-  width: 35px;
+  width: 40px;
+}
+.socialIcons img:hover {
+  opacity: 0.8;
+  box-shadow: 0px 2px 5px rgba(255, 148, 82, 0.635);
+  border-radius: 9px;
 }
 .langSelect {
   margin: 0 15px 0 0;
@@ -213,8 +218,9 @@ body {
 }
 
 .card h3 {
-  font-size: 1.5rem;
+  font-size: 1.55rem;
   margin-bottom: 5px;
+  text-shadow: -1px 3px 10px black;
 }
 
 .card p {
@@ -350,12 +356,15 @@ body {
 .aboutBody {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  justify-self: first flex-start;
   width: 100%;
 }
+
 .aboutBodyText {
   width: 40%;
 }
+
 .aboutBodyImage {
   width: 50%;
 }
@@ -363,7 +372,9 @@ body {
   width: 100%;
   min-height: 300px;
   border-radius: 7px;
+  margin: 41px 0 0 0;
 }
+
 .aboutTitle {
   color: #5c4033;
   padding: 0 40px;
