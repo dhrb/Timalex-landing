@@ -65,6 +65,7 @@ body {
 
 .navItemLink:hover {
   border: 0.8px solid #3f2218;
+  box-shadow: 0px 0px 4px rgb(244, 139, 27);
 }
 
 .headerContact {
@@ -219,6 +220,8 @@ body {
 
 .card h3 {
   font-size: 1.55rem;
+  font-weight: 600;
+  letter-spacing: 3px;
   margin-bottom: 5px;
   text-shadow: -1px 3px 10px black;
 }
@@ -229,17 +232,22 @@ body {
 }
 
 .btn {
+  background-color: #00000080;
   display: inline-block;
-  padding: 8px 16px;
+  padding: 10px 16px;
   border: 1px solid white;
+  box-shadow: 1px 1px 1px #fff;
   color: white;
   text-decoration: none;
-  font-size: 0.9rem;
-  border-radius: 4px;
+  letter-spacing: 1.5px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px rgb(252, 215, 167);
 }
 
 .btn:hover {
   background: rgba(255, 255, 255, 0.3);
+  text-shadow: -1px 1px 6px black;
 }
 
 /* Styles for planks.html */
@@ -427,8 +435,28 @@ body {
   text-decoration: none;
   color: inherit;
 }
+.infoPhone:hover {
+  color: #b351008d;
+}
 .infoAdress {
   margin: 0 0 5px;
+}
+.infoAdressMail {
+  display: block;
+  color: #1a1a1a;
+}
+.infoAdressMail a {
+  color: #1a1a1a;
+}
+.infoAdressLocation {
+  color: #1a1a1a;
+}
+.infoAdressLocation:hover {
+  color: #b351008d;
+}
+
+.infoAdressMail:hover {
+  color: #b351008d;
 }
 .contactUsForm {
   width: 48%;
@@ -557,6 +585,11 @@ body {
 .footerSocialIcons img {
   width: 50px;
 }
+.footerSocialIcons img:hover {
+  opacity: 0.8;
+  box-shadow: 0px 0px 3px black;
+  border-radius: 12px;
+}
 
 .contactContainer {
   display: flex;
@@ -585,6 +618,14 @@ body {
   flex-direction: column;
   justify-content: space-around;
   margin: 15px 0 0 15px;
+  color: inherit;
+}
+.contactDetails a {
+  color: #000000;
+}
+.contactDetails a:hover {
+  opacity: 0.8;
+  color: #0000008a;
 }
 .contactForm {
   color: #d94f20;
@@ -796,6 +837,7 @@ body {
   }
   .productsCards {
     justify-content: center;
+    margin: 0 0 15px 0;
   }
   .productsTitleTextBlock {
     left: 5%;
@@ -908,5 +950,8 @@ body {
   }
   .glideSlideImg {
     height: 100%;
+  }
+  .aboutBodyImageImg {
+    margin: 0;
   }
 }
